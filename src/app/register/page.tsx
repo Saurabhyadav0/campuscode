@@ -1,30 +1,39 @@
 "use client";
 
 import React, { useState } from "react";
+import { Bounce, ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // ✅ Import Toast styles
 
 const Registration = () => {
   const [loading, setLoading] = useState(false);
+  const notify = () => toast.success("✅ Details submitted successfully!");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
 
     const formData = new FormData(e.currentTarget);
-    const formObject = Object.fromEntries(formData.entries()); // Convert FormData to object
 
     try {
-      fetch(
+      const response = await fetch(
         "https://script.google.com/macros/s/AKfycbwxmKid-crHTSDlbKzEOWBEYCp2RjbtdZqKRHWcZ6yFNQYcMQ4YYr1mF2d-ENJUPalQ/exec",
         {
           method: "POST",
           body: formData,
         }
-      )
-        .then(() => window.location.reload())
-        .then(() => alert("Details have been submitted!"));
+      );
+
+      if (response.ok) {
+        notify(); // ✅ Show toast notification
+        if (e.currentTarget) {
+          e.currentTarget.reset(); // ✅ Reset form
+        }
+      } else {
+        toast.error("⚠️ Submission failed! Please try again.");
+      }
     } catch (error) {
       console.error("❌ Submission Error:", error);
-      alert("❌ Error submitting form. Check your internet connection.");
+      toast.error("❌ Error submitting form. Check your internet connection.");
     }
 
     setLoading(false);
@@ -36,6 +45,22 @@ const Registration = () => {
         <h2 className="text-center text-2xl font-semibold text-gray-800 mb-6">
           Registration Form
         </h2>
+
+        {/* ✅ Toast Container Must Be Rendered in JSX */}
+        <ToastContainer
+          position="top-center"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+          transition={Bounce}
+        />
+
         <form onSubmit={handleSubmit} className="flex flex-col">
           {/* Name */}
           <label htmlFor="name" className="font-medium text-gray-700">
