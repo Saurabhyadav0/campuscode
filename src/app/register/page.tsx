@@ -67,6 +67,7 @@ const Registration = () => {
             Name:
           </label>
           <input
+          placeholder="John Doe"
             type="text"
             id="name"
             name="Name"
@@ -79,6 +80,7 @@ const Registration = () => {
             Email:
           </label>
           <input
+          placeholder="abcd@gmail.com"
             type="email"
             id="email"
             name="Email"
@@ -91,6 +93,7 @@ const Registration = () => {
             Contact No:
           </label>
           <input
+          placeholder="2345678901"
             type="tel"
             id="contact"
             name="Contact"
@@ -103,6 +106,7 @@ const Registration = () => {
             College:
           </label>
           <input
+            placeholder="Enter your college name"
             type="text"
             id="college"
             name="College"
@@ -115,6 +119,7 @@ const Registration = () => {
             Branch:
           </label>
           <input
+          placeholder="Enter your branch"
             type="text"
             id="branch"
             name="Branch"
@@ -127,6 +132,7 @@ const Registration = () => {
             Year:
           </label>
           <input
+          placeholder="Enter your year"
             type="number"
             id="year"
             name="Year"

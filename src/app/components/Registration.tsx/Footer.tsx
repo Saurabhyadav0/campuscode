@@ -33,11 +33,11 @@ const Footer = () => {
 
       {/* Right Section - Social Icons */}
       <div className="flex items-center gap-4 text-gray-500">
-        <Link href="campuscodein@gmail.com"><Mail className="w-5 h-5 hover:text-gray-700 cursor-pointer" /></Link>
-        <Link href=""><DraftingCompass  className="w-5 h-5 hover:text-gray-700 cursor-pointer"  /></Link>
-        <Link href=""> <X className="w-5 h-5 hover:text-gray-700 cursor-pointer" /></Link>
-        <Link href=""> <Instagram className="w-5 h-5 hover:text-gray-700 cursor-pointer" /></Link>
-        <Link href="https://www.youtube.com/@campuscodein"> <Youtube className="w-5 h-5 hover:text-gray-700 cursor-pointer" /></Link>
+        <Link href="mailto:campuscodein@gmail.com" target="blank"><Mail className="w-5 h-5 hover:text-gray-700 cursor-pointer" /></Link>
+        <Link href="" target="blank"><DraftingCompass  className="w-5 h-5 hover:text-gray-700 cursor-pointer"  /></Link>
+        <Link href="" target="blank"> <X className="w-5 h-5 hover:text-gray-700 cursor-pointer" /></Link>
+        <Link href="https://www.instagram.com/soarxnetwork/"target="blank"> <Instagram className="w-5 h-5 hover:text-gray-700 cursor-pointer" /></Link>
+        <Link href="https://www.youtube.com/@campuscodein" target="blank"> <Youtube className="w-5 h-5 hover:text-gray-700 cursor-pointer" /></Link>
        
        
         
