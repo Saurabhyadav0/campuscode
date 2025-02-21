@@ -13,25 +13,15 @@ const Registration = () => {
     const formObject = Object.fromEntries(formData.entries()); // Convert FormData to object
 
     try {
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbyjdsAM-46Qc4rCSY1YP7iMsAZOk7U12xolqV9HvRyPGSwMOgXrAzErbhWVEuI545Pf/exec", // ✅ Replace with the new URL from Google Apps Script
+      fetch(
+        "https://script.google.com/macros/s/AKfycbwxmKid-crHTSDlbKzEOWBEYCp2RjbtdZqKRHWcZ6yFNQYcMQ4YYr1mF2d-ENJUPalQ/exec",
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded", // ✅ Ensures correct encoding
-          },
-          body: new URLSearchParams(formObject as Record<string, string>).toString(),
+          body: formData,
         }
-      );
-
-      const result = await response.json(); // ✅ Parse JSON response properly
-
-      if (result.status === "Success") {
-        alert("✅ Details submitted successfully!");
-        e.currentTarget.reset(); // ✅ Reset form after submission
-      } else {
-        alert("⚠️ Submission failed. Try again.");
-      }
+      )
+        .then(() => window.location.reload())
+        .then(() => alert("Details have been submitted!"));
     } catch (error) {
       console.error("❌ Submission Error:", error);
       alert("❌ Error submitting form. Check your internet connection.");
