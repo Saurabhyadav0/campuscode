@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="flex items-center gap-4 text-gray-500 text-sm">
         <span className="text-purple-500">✦</span>
         <Link href="#" className="hover:text-gray-700 transition">
-          What's New
+          What&apos;s New
         </Link>
         <Link href="#" className="hover:text-gray-700 transition">
           Discover

@@ -1,5 +1,4 @@
 import React from "react";
-import Home from "./components/Registration.tsx/Home";
 import Headers from "./components/Registration.tsx/Header";
 import Footer from "./components/Registration.tsx/Footer";
 import EventDetails from "./components/Registration.tsx/EventDetails";
@@ -17,7 +16,6 @@ function Hello() {
         date="Sunday, 22 October 2023"
         time="12:00 - 13:00 GMT+5:30"
         platform="YouTube"
-        registrationClosed={true}
         hostName="Campus Code"
         attendees={["Dhwani", "Amit", "Rohan", "Sakshi", "Megha", "Raj"]}
         eventImage="/img/poster.png"

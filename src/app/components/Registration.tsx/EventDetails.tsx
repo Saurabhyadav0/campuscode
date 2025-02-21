@@ -9,7 +9,6 @@ interface EventDetailsProps {
   date: string;
   time: string;
   platform: string;
-  registrationClosed: boolean;
   hostName: string;
   attendees: string[];
   eventImage: string;
@@ -20,7 +19,6 @@ const EventDetails: React.FC<EventDetailsProps> = ({
   date,
   time,
   platform,
-  registrationClosed,
   hostName,
   attendees,
   eventImage,
@@ -141,9 +139,9 @@ const EventDetails: React.FC<EventDetailsProps> = ({
             <br />
             <br />
             Join us for an exclusive session with Anshima Choudhary, a Senior
-            Software Development Engineer at Microsoft. If you're aspiring to
+            Software Development Engineer at Microsoft. If you&apos;re aspiring to
             excel in placement interviews and secure top positions, this is an
-            opportunity you can't afford to miss!
+            opportunity you can&apos;t afford to miss!
           </p>
 
           {/* Session Highlights */}
@@ -151,7 +149,7 @@ const EventDetails: React.FC<EventDetailsProps> = ({
             🔍 Session Highlights:
           </p>
           <ul className="list-disc list-inside text-gray-700 mt-2">
-            <li>Gain Insider Tips: Learn from Anshima’s experience.</li>
+            <li>Gain Insider Tips: Learn from Anshima&apos;s experience.</li>
             <li>Placement Interview Mastery: Excel in tech interviews.</li>
             <li>
               Career Insights: Build a successful software engineering career.
@@ -205,7 +203,7 @@ const EventDetails: React.FC<EventDetailsProps> = ({
 
           {/* Call to Action */}
           <p className="mt-4 text-gray-700">
-            🌟 Don't miss out on this incredible opportunity to learn from one
+            🌟 Don&apos;t miss out on this incredible opportunity to learn from one
             of the best in the industry. Secure your spot now and take the first
             step towards your dream career! 🌟
           </p>
