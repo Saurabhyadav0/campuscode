@@ -42,11 +42,11 @@ const EventDetails: React.FC<EventDetailsProps> = ({
         <div>
           <p className="font-semibold text-gray-800">Hosted By:</p>
           <div className="border-t border-gray-400 my-2"></div>
-          <div className="flex items-center space-x-11">
+          <div className="flex items-center justify-between">
             <p className="text-blue-600 font-medium hover:text-gray-700 cursor-pointer">
               {hostName}
             </p>
-            <div className="flex justify-end space-x-2 text-gray-500">
+            <div className="flex items-center space-x-2 text-gray-500">
               <Link
                 href="https://www.instagram.com/soarxnetwork/"
                 target="blank"
