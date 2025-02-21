@@ -24,7 +24,7 @@ const EventDetails: React.FC<EventDetailsProps> = ({
   eventImage,
 }) => {
   return (
-    <div className="max-w-6xl mx-auto p-6 flex flex-col md:flex-row gap-6 bg-transparent backdrop-blur-md rounded-lg shadow-lg">
+    <div className="max-w-6xl mx-auto p-6 flex flex-col md:flex-row gap-6 bg-transparent">
       {/* Left Column - Poster, Host, Attendees, Contact Info */}
       <div className="w-full md:w-1/3 space-y-6">
         {/* Event Poster */}
@@ -125,7 +125,7 @@ const EventDetails: React.FC<EventDetailsProps> = ({
         </div>
 
         {/* About Event (Scrollable if long) */}
-        <div className="h-60 overflow-y-auto bg-transparent p-4 border border-gray-300 rounded-lg">
+        <div className="bg-transparent p-4 border border-gray-300 rounded-lg">
           {/* About Event Title */}
           <p className="font-semibold text-gray-800 flex items-center gap-2">
             📌 About Event
