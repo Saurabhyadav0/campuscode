@@ -25,9 +25,7 @@ const Registration = () => {
 
       if (response.ok) {
         notify(); // ✅ Show toast notification
-        if (e.currentTarget) {
-          e.currentTarget.reset(); // ✅ Reset form
-        }
+        e.currentTarget.reset(); // ✅ Reset the form
       } else {
         toast.error("⚠️ Submission failed! Please try again.");
       }
