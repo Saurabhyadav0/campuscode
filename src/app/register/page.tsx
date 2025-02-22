@@ -12,7 +12,8 @@ const Registration = () => {
     e.preventDefault();
     setLoading(true);
 
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
     try {
       const response = await fetch(
@@ -25,7 +26,9 @@ const Registration = () => {
 
       if (response.ok) {
         notify(); // ✅ Show toast notification
-        e.currentTarget.reset(); // ✅ Reset the form
+
+        // ✅ Explicitly Reset Form Inputs
+        form.reset(); 
       } else {
         toast.error("⚠️ Submission failed! Please try again.");
       }
@@ -65,7 +68,7 @@ const Registration = () => {
             Name:
           </label>
           <input
-          placeholder="John Doe"
+            placeholder="John Doe"
             type="text"
             id="name"
             name="Name"
@@ -78,7 +81,7 @@ const Registration = () => {
             Email:
           </label>
           <input
-          placeholder="abcd@gmail.com"
+            placeholder="abcd@gmail.com"
             type="email"
             id="email"
             name="Email"
@@ -91,7 +94,7 @@ const Registration = () => {
             Contact No:
           </label>
           <input
-          placeholder="2345678901"
+            placeholder="2345678901"
             type="tel"
             id="contact"
             name="Contact"
@@ -117,7 +120,7 @@ const Registration = () => {
             Branch:
           </label>
           <input
-          placeholder="Enter your branch"
+            placeholder="Enter your branch"
             type="text"
             id="branch"
             name="Branch"
@@ -130,7 +133,7 @@ const Registration = () => {
             Year:
           </label>
           <input
-          placeholder="Enter your year"
+            placeholder="Enter your year"
             type="number"
             id="year"
             name="Year"
